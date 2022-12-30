@@ -1,30 +1,34 @@
 import React, { useState } from 'react'
-import { useUpdateProductMutation } from '../store'
+import { useHistory } from 'react-router-dom';
+import {  useUpdateProductMutation } from '../store'
 import Button from './Button';
 
 const UpdateProduct = () => {
 
-    const [products, setProducts] = useState('');
+    const history = useHistory();
 
-    const [updateProduct, result] = useUpdateProductMutation();
+    const [newProduct, setNewProduct] = useState('');
+
+    const [updateProduct, results] = useUpdateProductMutation();
 
     const handleChange = (e) => {
         const { value, name } = e.target;
-        setProducts({ ...products, [name]: value })
+        setNewProduct({ ...newProduct, [name]: value })
     }
 
     const handleUpdateProduct = (e) => {
         e.preventDefault();
-        updateProduct(products);
-        setProducts('')
+        updateProduct(newProduct);
+        history.push("/");
     }
 
 
     return (
         <div className='m-2'>
+            <h1>Update Product</h1>
             <form onSubmit={handleUpdateProduct} className='m-2 flex flex-row items-center'>
                 <input className='border border-inherit p-1 mx-2' onChange={handleChange} name='name' type="text" placeholder='Enter Product Name' />
-                <Button loading={result.isLoading} type='submit'>Add Product</Button>
+                <Button type='submit'>Update Product</Button>
             </form>
         </div>
     )

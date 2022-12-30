@@ -22,7 +22,6 @@ const ProductList = () => {
     const handleAddProduct = (e) => {
         e.preventDefault();
         addProduct(products);
-        setProducts('')
     }
 
     let content;

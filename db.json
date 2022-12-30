@@ -5,9 +5,24 @@
       "id": 1
     },
     {
+      "name": "table",
+      "id": 3
+    },
+    {
       "name": "Phone",
-      "id": 2
+      "id": 4
     }
   ],
-  "colors": []
+  "colors": [
+    {
+      "productId": 3,
+      "name": "rgb(158, 73, 126)",
+      "id": 2
+    },
+    {
+      "productId": 1,
+      "name": "rgb(75, 97, 151)",
+      "id": 3
+    }
+  ]
 }
