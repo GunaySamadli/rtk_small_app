@@ -1,8 +1,13 @@
 {
-    "products":[
-        {"id":1,"name":"Phone"}
-    ],
-    "colors":[
-        {"id":1,"name":"Red","productId":1}
-    ]
+  "products": [
+    {
+      "name": "Notebook",
+      "id": 1
+    },
+    {
+      "name": "Phone",
+      "id": 2
+    }
+  ],
+  "colors": []
 }
